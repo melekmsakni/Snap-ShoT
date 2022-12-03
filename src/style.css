@@ -1,0 +1,51 @@
+.container {
+  margin: 10px auto;
+  width: 60%;
+}
+.header {
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+}
+.boxForm {
+  margin-top: 40px;
+  text-align: center;
+}
+
+input[type="text"] {
+  margin-right: 20px;
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 1px;
+  padding: 10px;
+  background-color: #eee;
+  width: 40%;
+}
+
+input[type="submit"] {
+  background-color: #eee;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #eee;
+  color: black;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.categoriebtn {
+  display: flex;
+  margin: 20px 0px;
+
+  justify-content: space-evenly;
+}
+
+.btn {
+  padding: 10px;
+  background-color: aqua;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 17px;
+  border-radius: 5px;
+}

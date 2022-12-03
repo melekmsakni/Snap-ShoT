@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Categoriebtn } from "./components/Categoriebtn";
+import { Header } from "./components/Header";
+import { InputField } from "./components/InputField";
+import "./style.css";
 
 function App() {
+  const generateImage = () => {
+    let l = [];
+    for (let i = 0; i < 25; i++) {
+      l.push("https://picsum.photos/240/230");
+    }
+    return l;
+  };
+  const getBtn = () => {
+    let l = [];
+    l = images.map((el) => {
+      return el.categorie;
+    });
+
+    return l;
+  };
+  const [images, setImages] = useState([
+    { categorie: "beachs", pics: generateImage() },
+    { categorie: "mountain", pics: generateImage() },
+    { categorie: "birds", pics: generateImage() },
+    { categorie: "birds", pics: generateImage() },
+    { categorie: "birds", pics: generateImage() },
+    { categorie: "birds", pics: generateImage() },
+    { categorie: "birds", pics: generateImage() },
+    
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header />
+      <InputField />
+      <Categoriebtn getBtn={getBtn} />
     </div>
   );
 }
